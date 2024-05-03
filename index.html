@@ -10,7 +10,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title></title>
     <meta name="description" content="">
-    <link rel="shortcut icon" href="#">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="assets/css/site.css">
     <script src="assets/js/site.js" defer></script>
@@ -18,17 +17,28 @@
 
 <body>
 
+    <div id="mainContent">
 
         <header>
             <h1>Dansk Hundekennel</h1>
             <p>Velkommen til det bedste sted for dine pelsede venner!</p>
         </header>
 
-        <div id="menuOpen" onclick="openNavPush()">Menu</div>
+            <div id="menuOpen" onclick="openNavPush()">menu</div>
+        <!-- side menu -->
+        <div class="menu" id="sideMenu">
+            <!-- Close button -->
+            <span class="closebtn" onclick="closeNavPush()">&times;</span>
+            <!-- menu content -->
+            <ul>
+                <li><a href="#omOs" onclick="closeNavPush()">Om Os</a></li>
+                <li><a href="#hunde" onclick="closeNavPush()">Hunde</a></li>
+                <li><a href="#" onclick="closeNavPush()">About</a></li>
+                <li><a href="#" onclick="closeNavPush()">About</a></li>
+            </ul>
+        </div>
 
-
-        <section class="container">
-
+        <section id="omOs" class="container">
             <h2>Om Os</h2>
             <p>Vi er en dansk hundekennel dedikeret til at give fremragende pleje og kærlighed til hunde af alle racer.
             </p>
@@ -37,7 +47,7 @@
 
         </section>
 
-        <section class="container" id="dogs">
+        <section class="container" id="hunde">
 
             <h2>Vores Hunde</h2>
             <p>Mød nogle af vores dejlige hunde til adoption eller avl:</p>
@@ -57,9 +67,103 @@
 
         </section>
 
-        <footer>
+        <footer id="mainContent">
             <p>&copy; 2024 Dansk Hundekennel</p>
         </footer>
+    </div>
+    
+    <!-- cookies popup -->
+    <div class="popup">
+        <div class="popup-content">
+            <!-- tekst -->
+            <div class="gridContainer">
+                <article>
+                    <h3>Hvad er cookies?</h3>
+ 
+                    <p>En cookie er en lille tekstfil, der gemmes på din computer, når du besøger en hjemmeside. Cookies
+                        bruges
+                        til
+                        at
+                        hjælpe hjemmesider med at fungere mere effektivt og give information til ejerne af hjemmesiden.
+                    </p>
+ 
+                    <h3>Hvordan bruger vi cookies?</h3>
+ 
+                    <p>Vi bruger cookies til at indsamle anonyme oplysninger om brugeradfærd på vores hjemmeside, så vi
+                        kan
+                        forbedre
+                        brugeroplevelsen. Cookies bruges også til at huske dine præferencer, når du vender tilbage til
+                        vores
+                        hjemmeside.</p>
+                    </article>
+                <article>
+                    <h3>Typer af cookies, vi bruger</h3>
+ 
+                    <ul>
+                        <li><strong>Nødvendige cookies:</strong> Disse cookies er afgørende for at give dig service
+                            tilgængelige
+                            via
+                            vores
+                            hjemmeside og bruge visse funktioner.</li>
+                        <li><strong>Funktionalitetscookies:</strong> Disse cookies hjælper med at forbedre
+                            funktionaliteten
+                            af
+                            vores
+                            hjemmeside ved at gemme dine præferencer.</li>
+                        <li><strong>Ydelses- og analytiske cookies:</strong> Disse cookies indsamler oplysninger om,
+                            hvordan
+                            besøgende
+                            bruger vores hjemmeside, f.eks. hvilke sider de besøger mest, og om de modtager
+                            fejlmeddelelser.
+                            Disse
+                            data
+                            hjælper os med at forbedre vores hjemmeside.</li>
+                    </ul>
+                </article>
+                <article>
+                    <h3>Sådan styrer du cookies</h3>
+ 
+                    <p>Du kan styre og slette cookies efter eget ønske. Du kan slette alle cookies, der allerede er gemt
+                        på
+                        din
+                        computer, og
+                        du kan indstille de fleste browsere til at forhindre, at cookies bliver gemt. Men hvis du gør
+                        det,
+                        skal
+                        du
+                        muligvis
+                        manuelt justere nogle indstillinger hver gang du besøger en hjemmeside, og visse tjenester og
+                        funktioner
+                        vil
+                        muligvis ikke fungere korrekt.</p>
+ 
+                    <p>For at få flere oplysninger om cookies, herunder hvordan du styrer og sletter dem, kan du besøge
+                        <a href="https://da.wikipedia.org/wiki/HTTP_cookie">denne side om cookies</a>.
+                    </p>
+                    <h3>kontakt os</h3>
+                 </article>
+            </section>
+            <p>Hvis du har spørgsmål om vores brug af cookies, er du velkommen til at kontakte os på følgende
+                e-mailadresse:
+                <a href="mailto:info@example.com">info@example.com</a>.
+            </p>
+ 
+            <p>Denne cookiepolitik blev sidst opdateret den 1. maj 2024.</p>
+ 
+        </section>
+            </div>
+
+            <div>
+                <button id="allow-all">Allow All</button>
+                <button id="allow-necessary">Allow Necessary</button>
+                <button id="none">None</button>
+            </div>
+        
+        </div>
+        
+    </div>
+    <div class="overlay"></div>
+
 </body>
 </html>
 
